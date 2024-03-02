@@ -11,6 +11,7 @@
 		29EFB5CA2B92B4E600C6BE6F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EFB5C92B92B4E600C6BE6F /* ContentView.swift */; };
 		29EFB5CC2B92B4E700C6BE6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29EFB5CB2B92B4E700C6BE6F /* Assets.xcassets */; };
 		29EFB5CF2B92B4E700C6BE6F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29EFB5CE2B92B4E700C6BE6F /* Preview Assets.xcassets */; };
+		29EFB5D72B92B4FD00C6BE6F /* AppState in Frameworks */ = {isa = PBXBuildFile; productRef = 29EFB5D62B92B4FD00C6BE6F /* AppState */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		29EFB5C92B92B4E600C6BE6F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		29EFB5CB2B92B4E700C6BE6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29EFB5CE2B92B4E700C6BE6F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		29EFB5D82B92B7F000C6BE6F /* SyncStateExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SyncStateExample.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29EFB5D72B92B4FD00C6BE6F /* AppState in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +54,7 @@
 		29EFB5C62B92B4E600C6BE6F /* SyncStateExample */ = {
 			isa = PBXGroup;
 			children = (
+				29EFB5D82B92B7F000C6BE6F /* SyncStateExample.entitlements */,
 				29EFB5C72B92B4E600C6BE6F /* SyncStateExampleApp.swift */,
 				29EFB5C92B92B4E600C6BE6F /* ContentView.swift */,
 				29EFB5CB2B92B4E700C6BE6F /* Assets.xcassets */,
@@ -83,6 +87,9 @@
 			dependencies = (
 			);
 			name = SyncStateExample;
+			packageProductDependencies = (
+				29EFB5D62B92B4FD00C6BE6F /* AppState */,
+			);
 			productName = SyncStateExample;
 			productReference = 29EFB5C42B92B4E600C6BE6F /* SyncStateExample.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +118,9 @@
 				Base,
 			);
 			mainGroup = 29EFB5BB2B92B4E600C6BE6F;
+			packageReferences = (
+				29EFB5D52B92B4FD00C6BE6F /* XCRemoteSwiftPackageReference "AppState" */,
+			);
 			productRefGroup = 29EFB5C52B92B4E600C6BE6F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -269,9 +279,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SyncStateExample/SyncStateExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SyncStateExample/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -297,9 +309,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SyncStateExample/SyncStateExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SyncStateExample/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -342,6 +356,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		29EFB5D52B92B4FD00C6BE6F /* XCRemoteSwiftPackageReference "AppState" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/0xLeif/AppState/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		29EFB5D62B92B4FD00C6BE6F /* AppState */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29EFB5D52B92B4FD00C6BE6F /* XCRemoteSwiftPackageReference "AppState" */;
+			productName = AppState;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 29EFB5BC2B92B4E600C6BE6F /* Project object */;
 }
