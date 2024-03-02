@@ -98,3 +98,7 @@ struct SyncStateExampleApp: App {
     }
 }
 ```
+
+That should be all the code you need for the app to locally update state, but also sync state on the icloud devices. You will need to follow this guide to enable the icloud key value store capability.
+
+https://github.com/0xLeif/AppState/wiki/Starting-to-use-SyncState
